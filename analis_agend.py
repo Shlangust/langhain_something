@@ -7,12 +7,13 @@ from langchain_core.runnables import RunnableBranch, RunnableLambda
 from pydantic import BaseModel
 import os
 
+from config import agent_key
 
 # Инициализация модели Groq
 llm = ChatGroq(
     model="llama-3.3-70b-versatile", # Или другая доступная модель, например mixtral-8x7b-32768
     temperature=0.7,
-    api_key="key",
+    api_key=agent_key,
 )
 
 MY_STACK = """
